@@ -1,0 +1,127 @@
+.navbar-container {
+    width: 100%;
+    top: -0.3rem;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    padding: 1.7rem 0;
+    z-index: 100;
+    background: var(--color-bg);
+}
+.navbar-active {
+    div {
+        color: var(--color-light);
+        background-color: var(--color-light);
+        height: 3px;
+        animation: nav-border 0.25s forwards;
+    }
+}
+.navbar-icon {
+    position: relative;
+    top: -9px;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.navbar-hamburger {
+    display: none;
+}
+.navbar-hamburger-list {
+    margin-top: 1rem;
+    text-align: center;
+    li {
+        margin: 0.6rem 0;
+        padding: 0.1rem 0.5rem;
+        &:hover {
+            background: var(--color-light);
+            color: var(--color-bg);
+        } 
+    }
+}
+.navbar-list {
+    display: flex;
+    li {
+        padding: 0 1.3rem ;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: all 0.2s ;
+        &:hover {
+            div {
+                color: var(--color-light);
+                background-color: var(--color-light);
+                height: 3px;
+                animation: nav-border 0.25s forwards;
+            }
+        }
+    }
+}
+.navbar-logo {
+    display: flex;
+    p {
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+}
+.navbar-square {
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-light);
+    margin: 0 1rem;
+}
+
+// ================= ANIMATION ================= //
+@keyframes nav-border {
+    from { width: 0%;}
+    to { width: 70%;}
+}
+// ================= MEDIA QUERY ================= //
+@media(max-width: 1080px) {
+    .navbar-list{
+        display: none;
+    }
+    .navbar-hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media(max-width: 768px) {
+    .navbar-hamburger-list {
+        li {
+            font-size: 0.9rem;
+        }
+    }
+    .navbar-square {
+        width: 15px;
+        height: 15px;
+        margin: 0 0.5rem;
+    }
+    .navbar-logo{
+        p{
+            font-size: 0.8rem;
+        }
+    }
+    .navbar-icon {
+        font-size: 2rem;
+        top: -7px;
+    }
+}
+@media(max-width: 576px) {
+    .navbar-square {
+        width: 12px;
+        height: 12px;
+    }
+    .navbar-hamburger-list {
+        li {
+            font-size: 0.7rem;
+        }
+    }
+    .navbar-logo{
+        p {
+            font-size: 0.7rem;
+        }
+    }
+    .navbar-icon {
+        font-size: 1.7rem;
+        top: -2px;
+    }
+}

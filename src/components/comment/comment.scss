@@ -1,0 +1,125 @@
+// .comment-container {
+// }
+.comment-title {
+    text-align: center;
+    margin-bottom: 7rem;
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+        position: relative;
+        top: -1rem;
+    }
+}
+.comment-main-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 8rem;
+    width: 90%;
+    margin: 0 auto;
+    }
+
+.comment-card-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 100px;
+        border-radius: 50%;
+        border: 2px solid var(--color-violet);
+    }
+    h3 {
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+}
+.comment-card-container {
+    opacity: 0.5;
+
+}
+.comment-card-container.active {
+    opacity: 1;
+}
+.comment-card-stars {
+    display: flex;
+    justify-content: center;
+    svg {
+        margin: 0 7px 2rem;
+        color: var(--color-violet);
+    }
+}
+.comment-card-text {
+    
+    p {
+        font-size: 0.9rem;
+    }
+}
+.comment-arrow {
+    margin-top: 3rem;
+    text-align: center;
+    svg {
+        font-size: 2rem;
+        margin: 0 1rem;
+        &:hover {
+            color: var(--color-violet);
+        }
+    }
+}
+// ================= MEDIA QUERY ================= //
+@media(max-width: 1080px){
+    .comment-card-text {
+        p {
+            font-size: 0.8rem;
+        }
+    }
+    .comment-arrow {
+        svg {
+            font-size: 1.5rem;
+            
+        }
+    }
+}
+@media(max-width: 768px){
+    .comment-title {
+        margin-bottom: 3rem;
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 15px;
+        }
+    }
+    .comment-card-image {
+        img {
+            width: 100px;
+        }
+    }
+    .comment-card-container {
+        display: none;
+    }
+    .comment-main-container {
+        display: flex;
+        justify-content: center;
+    }
+    .comment-card-container.active {
+        display: block;
+    }
+    .comment-card-text {
+        padding: 0 10rem;
+
+    }
+}
+@media(max-width: 576px){
+    .comment-card-image {
+        img {
+            width: 80px;
+        }
+    }
+    .comment-card-text {
+        padding: 0 4rem;
+        p {
+            font-size: 13px;
+        } 
+    }
+}

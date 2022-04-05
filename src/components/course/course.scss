@@ -1,0 +1,233 @@
+.course-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.course-topbar {
+    width: 100%;
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+.course-arrowdown {
+    font-size: 3.5rem;
+    opacity: 0.5;
+    text-align: center;
+    width: 100%;
+    margin-top: 4rem;
+}
+.course-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+.course-title-item {
+    h2{
+        margin: 0 1rem;
+        span{
+            padding: 0 10px;
+            font-size: 3rem;
+        }
+    }
+}
+.course-edition {
+    text-align: right;
+    margin-right: 1.3rem;
+    p {
+        span {
+            font-size: 0.75rem;
+        }
+    }
+}
+.course-cards {
+    margin-top: 1rem;
+    display: grid;
+    width: 100%;
+    justify-content: space-around;
+    grid-template-columns: 20% 20% 20% 20%;
+}
+.course-card-container {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    border: 2px solid var(--color-light);
+    h1 {
+        margin: 4rem 0 0.5rem;
+    }
+    button {
+        margin: 2rem;
+    }
+    p {
+        padding: 1rem;
+    }
+    div{
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 20%;
+        height: 2px;
+    }
+}
+.more-course-btn {
+    text-align: center;
+    span {
+        margin: 0 2rem;
+        font-size: 3rem;
+        position: relative;
+        top: 18px;
+        opacity: 0.5;
+    }
+}
+// ================= MEDIA QUERY ================= //
+@media(max-width: 1080px){
+    .course-container {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+    .course-arrowdown {
+        font-size: 2.7rem;
+    }
+    .course-title {
+        margin-top: 3.5rem;
+    }
+    .course-title-item {
+        h2 {
+            font-size: 1.3rem;
+            span {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .course-cards {
+        justify-content: space-evenly;
+        grid-template-columns: 30% 30% 30%;
+        gap: 2rem;
+    }
+    .course-card-container {
+        h1 {
+            font-size: 1.5rem;
+            margin: 2rem 0 0.5rem;
+        }
+        button {
+            font-size: 0.9rem;
+            margin: 1.5rem;
+        }
+        p {
+            font-size: 0.9rem;
+            padding: 1rem;
+        }
+    }
+}
+@media(max-width: 768px){
+    .course-container {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    .course-cards {
+        grid-template-columns: 45% 45%;
+        gap: 2rem;
+        padding: 0 3rem;
+    }
+    .course-card-container {
+        h1 {
+            font-size: 1rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        button {
+            font-size: 0.9rem;
+            margin: 1rem;
+        }
+        p {
+            font-size: 0.7rem;
+            padding: 1.2rem;
+        }
+    }
+    .more-course-btn {
+        font-size: 0.8rem;
+        span {
+            top: 10px;
+            margin: 0 1rem;
+            font-size: 2rem;
+        }
+    }
+    .course-arrowdown {
+        font-size: 2.2rem;
+        margin-top: 2.3rem;
+    }
+    .course-title-item {
+        h2 {
+            font-size: 1.1rem;
+            span {
+                padding: 0 5px;
+                font-size: 2rem;
+            }
+        }
+    }
+    .course-edition {
+        p {
+            font-size: 0.85rem;
+            span {
+                font-size: 0.6rem;
+            }
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
+}
+@media(max-width: 576px){
+    .course-container {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+    .course-arrowdown {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    .course-title-item {
+        h2 {
+            margin: 0.1rem;
+            font-size: 0.9rem;
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .course-edition {
+        p {
+            font-size: 0.7rem;
+            span {
+                font-size: 0.6rem;
+            }
+        }
+        h2 {
+            font-size: 0.9rem;
+        }
+    }
+    .course-cards {
+        grid-template-columns: 70%;
+        gap: 1rem;
+        padding: 0 3rem;
+    }
+    .course-card-container {
+        h1 {
+            font-size: 1rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        button {
+            font-size: 0.7rem;
+            margin: 1rem;
+        }
+        p {
+            font-size: 0.7rem;
+            padding: 1rem;
+        }
+    }
+}

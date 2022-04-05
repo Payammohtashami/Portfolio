@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;500;700&display=swap');
+:root {
+    --color-bg: #181818;
+    --color-dark: #141414;
+    --color-violet: #a460f9;
+    --color-light: #f1f1f1;
+    --color-light-violet: #aa84f9;
+
+    --transition: all 0.25s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Krub', sans-serif;
+    font-weight: 500;
+    background: var(--color-bg);
+    color: var(--color-light);
+    line-height: 1.7;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+// ================= GENERAL STYLE ================= //
+
+.btn {
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: var(--color-light-violet);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: var(--color-light);
+    transition: var(--transition);
+    &:hover {
+        background: var(--color-violet);
+    }
+}
+.btn.btn-white {
+    background: var(--color-light);
+    color: var(--color-bg);
+    &:hover {
+        background: transparent;
+        color: var(--color-light);
+        border: 1px solid var(--color-light);
+    }
+}
+.btn.btn-light {
+    background: transparent;
+    &:hover {
+        color: var(--color-bg);
+        background: var(--color-light);
+        border: 1px solid var(--color-light);
+    }
+}
+h1,h2,h3,h4,h5 {
+    font-weight: 700;
+}
+
+.text-light{
+    font-weight: 400;
+}
+.text-bold {
+    font-weight: 700;
+}
+.violet-bg {
+    background: var(--color-violet);
+}
+.text-violet {
+    color: var(--color-violet);
+}
+a{
+    color: var(--color-light);
+}
+// ================= Large DIVIECE ================= //
+@media(max-width: 1080px) {
+
+}
+// ================= MEDIUM DIVIECE ================= //
+@media(max-width: 768px) {
+    .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+// ================= SMALL DIVIECE ================= //
+@media(max-width: 576px) {
+    .btn {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.7rem;
+    }
+}
